@@ -1,0 +1,23 @@
+.header {
+    
+    &__content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+
+        height: 100px;
+    }
+
+    &__logo {
+        img {
+            max-height: 100px;
+        }
+    }
+
+    &__title-text {
+        font-size: var(--text-lg);
+        font-family: var(--font-secondary);
+    }
+}

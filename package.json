@@ -49,6 +49,7 @@
     "gatsby-plugin-force-trailing-slashes": "1.0.4",
     "gatsby-plugin-manifest": "2.2.28",
     "gatsby-plugin-offline": "3.0.21",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "3.1.15",
     "gatsby-plugin-sass": "^2.1.28",
     "gatsby-plugin-sharp": "2.3.1",

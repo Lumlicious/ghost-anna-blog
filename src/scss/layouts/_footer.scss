@@ -1,0 +1,15 @@
+.footer {
+    
+    background-color: $bg-gray;
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 6em;
+        font-size: $font-size-tiny;
+        text-transform: uppercase;
+        font-family: $font-sans-serif;
+    }
+}

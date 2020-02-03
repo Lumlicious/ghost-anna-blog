@@ -1,0 +1,143 @@
+.post-card {
+    display: block;
+
+    &__title {
+        margin-top: 0;
+        clear: both;
+        margin-bottom: 8px;
+        font-size: $font-size-h4;
+        line-height: 24px;
+        font-weight: $font-weight-bold;
+    }
+
+    &__inside {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    &__media {
+        height: 450px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    &__content {
+        background-color: $color-white;
+        padding: 28px;
+        box-shadow: 8px 8px 0 $color-border;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__meta {
+        display: flex;
+        flex-direction: row;
+        font-family: $font-sans-serif;
+        font-weight: $font-weight-regular;
+        text-transform: uppercase;
+        font-size: $font-size-tiny;
+        color: $color-gray;
+        // align-items: center;
+    }
+
+    &__avatar {
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    &__author {
+        margin-right: 16px;
+        position: relative;
+
+        &:after {
+            display: block;
+            content: "•";
+            bottom: 0;
+            right: -11px;
+            position: absolute;
+          }
+    }
+}
+
+// .post-card {
+//     color: inherit;
+//     text-decoration: none;
+// }
+
+// .post-card:hover {
+//     text-decoration: none;
+// }
+
+// .post-card-tags {
+//     margin: 0 0 5px 0;
+//     font-size: 1.4rem;
+//     line-height: 1.15em;
+//     color: var(--color-secondary);
+// }
+
+
+// .post-card-title {
+//     margin: 0 0 10px 0;
+//     padding: 0;
+// }
+
+// .post-card-excerpt {
+//     font-size: 1.6rem;
+//     line-height: 1.55em;
+// }
+
+// .post-card-image {
+//     margin: 0 0 10px 0;
+//     width: auto;
+//     height: 200px;
+//     background: var(--color-secondary) no-repeat center center;
+//     background-size: cover;
+// }
+
+// .post-card-footer {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     margin: 10px 0 0 0;
+//     color: var(--color-secondary);
+// }
+
+// .post-card-footer-left {
+//     display: flex;
+//     align-items: center;
+// }
+
+// .post-card-footer-right {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .post-card-avatar {
+//     width: 30px;
+//     height: 30px;
+//     margin: 0 7px 0 0;
+//     border-radius: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// .post-card-avatar .author-profile-image {
+//     display: block;
+//     width: 100%;
+//     background: var(--color-secondary);
+//     border-radius: 100%;
+//     object-fit: cover;
+// }
+
+// .post-card-avatar .default-avatar {
+//     width: 26px;
+// }

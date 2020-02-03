@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import { Layout, PostCard, Pagination } from '../components/common'
+import { Layout, PostCard, HeroPostCard, Pagination } from '../components/common'
 import { MetaData } from '../components/common/meta'
 
 /**
@@ -14,14 +14,18 @@ import { MetaData } from '../components/common/meta'
 *
 */
 const Index = ({ data, location, pageContext }) => {
-    const posts = data.allGhostPost.edges
+    const firstPost = data.allGhostPost.edges[0]['node'];
+    const posts = data.allGhostPost.edges.slice(1, data.allGhostPost.edges.length);
 
     return (
         <>
             <MetaData location={location} />
             <Layout isHome={true}>
-                <div className="container">
-                    <section className="post-feed">
+                <div className="hero">
+                    <HeroPostCard key={firstPost.id} post={firstPost} />
+                </div>
+                <div className="landing">
+                    <section className="landing__posts">
                         {posts.map(({ node }) => (
                             // The tag below includes the markup for each post - components/common/PostCard.js
                             <PostCard key={node.id} post={node} />
