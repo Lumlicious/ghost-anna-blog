@@ -10,8 +10,8 @@ const HeroPostCard = ({ post }) => {
 
     return (
         <Link to={url} className="hero-post-card">
-            <div className="hero-post-card__media">
-                <img src={post.feature_image}></img>
+            <div className="hero-post-card__media" style={{ ...post.feature_image && { backgroundImage: `url(${post.feature_image})` } }}>
+                {/* <img src={post.feature_image}></img> */}
             </div>
             <div className="hero-post-card__content">
                 <h2 className="hero-post-card__title">{post.title}</h2>

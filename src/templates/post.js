@@ -26,13 +26,14 @@ const Post = ({ data, location }) => {
                 <style type="text/css">{`${post.codeinjection_styles}`}</style>
             </Helmet>
             <Layout>
-                <div>
-                    <article className="content">
+                <div class="post">
+                    <article className="content grt">
 
                         { post.feature_image ?
                             <div className="hero">
                                 <HeroPostCard key={post.id} post={post} />
                             </div> : null }
+                        <div class="post__hero-border"></div>
 
                         <section className="post-full-content">
                             {/* The main post content */ }

@@ -1,40 +1,210 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $font-sans-serif;
-  font-weight: 700;
-  line-height: initial;
-}
 
-h1 {
-  font-size: $font-size-h1;
-}
+// h1, h2, h3, h4 {
+//   font-family: $font-sans-serif;
+// }
 
-h2 {
-  font-size: $font-size-h2;
-}
+// h1 {
+// 	font-size: 45px;
+// 	line-height: 68px;
+// 	margin-bottom: 36px;
+// }
 
-h3 {
-  font-size: $font-size-h3;
-}
+// .title {
+// 	font-size: 58px;
+// 	line-height: 86px;
+// 	margin-bottom: 36px;
+// }
 
-h4 {
-  font-size: $font-size-h4;
-}
+// h2 {
+// 	font-size: 36px;
+// 	line-height: 55px;
+// 	margin-top: 58px;
+// 	margin-bottom: 22px;
+// }
 
-h5 {
-  font-size: $font-size-h5;
-}
+// h3 {
+// 	font-size: 28px;
+// 	line-height: 44px;
+// 	margin-top: 36px;
+// 	margin-bottom: 14px;
+// }
 
-h6 {
-  font-size: $font-size-h6;
-}
+// h4 {
+// 	font-size: 22px;
+// 	line-height: 36px;
+// 	font-weight: bold;
+// 	margin-bottom: 9px;
+// }
 
-b,
-strong {
-  font-weight: $font-weight-medium;
-}
+// p, ul, ol, blockquote, pre, .alert, .note, .box, .footnotes {
+// 	margin-bottom: 36px;
+// }
 
+// ul, ol {
+// 	margin-left: 36px;
+// }
+// li {
+// 	margin-bottom: 14px;
+// }
+
+// sub, sup {
+// 	padding: 0 1px;
+// }
+// code, pre, kbd {
+// 	font-size: 20px;
+// }
+// code {
+// 	background-color: rgba(0,0,0,0.08);
+// 	padding: 5px 6px;
+// 	border-radius: 9px;
+// 	margin: 0 1px;
+// }
+// pre {
+// 	padding: 14px;
+// 	border-style: solid;
+// 	border-color: rgba(0,0,0,0.15);
+// 	border-width: 0 0 0 9px;
+// }
+// kbd {
+// 	background-color: #fff;
+// 	padding: 5px 6px;
+// 	border-radius: 6px;
+// 	box-shadow: 0 0 6px 0 rgba(0,0,0,0.45);
+// 	margin: 0 1px;
+// }
+// .alert, .note, .box {
+// 	padding: 22px;
+// }
+// .footnotes {
+// 	font-size: 17px;
+// 	line-height: 29px;
+// 	padding-top: 22px;
+// 	border-top: 1px dotted rgba(0,0,0,0.15);
+// }
+// .footnotes p {
+// 	margin-bottom: 22px;
+// }
+
+// @media all and (min-width: 792px) {
+// 	.content-body {
+// 		padding: 36px;
+// 	}
+// }
+
+
+
+
+// h1, h2, h3, h4 {
+//   font-family: $font-sans-serif;
+// }
+
+// .content-body {
+// 	max-width: 720px;
+// 	font-family: "Crimson Text", serif;
+// 	font-size: 22px;
+// 	line-height: 36px;
+// 	padding: 22px;
+// }
+// .content-body h1 {
+// 	font-size: 45px;
+// 	line-height: 68px;
+// 	margin-bottom: 36px;
+// }
+// .content-body .title {
+// 	font-size: 58px;
+// 	line-height: 86px;
+// 	margin-bottom: 36px;
+// }
+// .content-body h2 {
+// 	font-size: 36px;
+// 	line-height: 55px;
+// 	margin-top: 58px;
+// 	margin-bottom: 22px;
+// }
+// .content-body h3 {
+// 	font-size: 28px;
+// 	line-height: 44px;
+// 	margin-top: 36px;
+// 	margin-bottom: 14px;
+// }
+// .content-body h4 {
+// 	font-size: 22px;
+// 	line-height: 36px;
+// 	font-weight: bold;
+// 	margin-bottom: 9px;
+// }
+// .content-body p, .content-body ul, .content-body ol, .content-body blockquote, .content-body pre, .content-body .alert, .content-body .note, .content-body .box, .content-body .footnotes {
+// 	margin-bottom: 36px;
+// }
+// .content-body ul, .content-body ol {
+// 	margin-left: 36px;
+// }
+// .content-body li {
+// 	margin-bottom: 14px;
+// }
+// // .content-body blockquote {
+// // 	padding-left: 22px;
+// // 	border-style: solid;
+// // 	border-color: rgba(0,0,0,0.15);
+// // 	border-width: 0 0 0 9px;
+// // }
+// .content-body sub, .content-body sup {
+// 	padding: 0 1px;
+// }
+
+// .content-body kbd {
+// 	background-color: #fff;
+// 	padding: 5px 6px;
+// 	border-radius: 6px;
+// 	box-shadow: 0 0 6px 0 rgba(0,0,0,0.45);
+// 	margin: 0 1px;
+// }
+// .content-body .alert, .content-body .note, .content-body .box {
+// 	padding: 22px;
+// }
+// .content-body .footnotes {
+// 	font-size: 17px;
+// 	line-height: 29px;
+// 	padding-top: 22px;
+// 	border-top: 1px dotted rgba(0,0,0,0.15);
+// }
+// .content-body .footnotes p {
+// 	margin-bottom: 22px;
+// }
+// .content-body ul ul, .content-body ul ol, .content-body ol ul, .content-body ol ol, .content-body blockquote.right p, .content-body blockquote.left p, .content-body .alert :last-child, .content-body .note :last-child, .content-body .box :last-child, .content-body .footnotes :last-child {
+// 	margin-bottom: 0;
+// }
+// @media all and (min-width: 792px) {
+// 	.content-body {
+// 		padding: 36px;
+// 	}
+// }
+
+
+p {margin-bottom: 1.15rem;}
+
+h1, h2, h3, h4, h5 {
+	margin: 2.75rem 0 1.05rem;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	line-height: 1.15;
+  }
+  
+  h1 {
+	margin-top: 0;
+	font-size: 1.802em;
+  }
+  
+  h2 {font-size: 1.602em;}
+  
+  h3 {font-size: 1.424em;}
+  
+  h4 {font-size: 1.266em;}
+  
+  h5 {font-size: 1.125em;}
+  
+  small, .text_small {font-size: 0.889em;}
+
+  .content-body {
+	padding: 22px;
+  }

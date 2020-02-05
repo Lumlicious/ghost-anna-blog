@@ -1,0 +1,15 @@
+blockquote {
+    font-weight: $font-weight-medium;
+    font-family: $font-sans-serif;
+    border-left: calc(#{$base-spacing-unit} / 2) solid $color-brand;
+    padding: calc(#{$base-spacing-unit} / 2) + $base-spacing-unit;
+    background-color: $card-bg;
+    box-shadow: calc(#{$base-spacing-unit} / 2) calc(#{$base-spacing-unit} / 2) 0 $bg-gray;
+  
+    @include breakpoint(md) {
+      font-size: $font-size-h2;
+      padding: calc(#{$base-spacing-unit} * 2) + $base-spacing-unit;
+      margin-top: calc(#{$base-spacing-unit} / 2);
+      margin-bottom: calc(#{$base-spacing-unit} * 2);
+    }
+  }

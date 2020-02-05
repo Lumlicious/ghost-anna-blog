@@ -13,17 +13,18 @@
     }
 
     &__media {
-        width: 70%;
-        overflow: hidden;
-        position: relative;
+        height: 450px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
     }
 
     img {
         max-width: 100%;
         transition: all 1.0s;
         display: block;
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 300px;
         transform: scale(1);
     }
 
@@ -35,14 +36,9 @@
 
     &__content {
         background-color: white;
-        width: 300px;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translate(-48px, -50%);
+        position: relative;
         padding: 28px;
         word-break: break-word;
-        box-shadow: 8px 8px 0 #ececec;
         display: flex;
         flex-direction: column;
     }
@@ -79,5 +75,77 @@
             right: -11px;
             position: absolute;
           }
+    }
+}
+
+
+
+
+@include breakpoint(sm) {
+     .hero-post-card {
+        img {
+            max-width: 100%;
+            transition: all 1.0s;
+            display: block;
+            width: 100%;
+            height: auto;
+            transform: scale(1);
+        }
+    
+        &__media {
+            height: 450px;
+            width: 70%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+
+        &__content {
+            background-color: white;
+            width: 300px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(-48px, -50%);
+            padding: 28px;
+            word-break: break-word;
+            box-shadow: 8px 8px 0 #ececec;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        &__meta {
+            display: flex;
+            flex-direction: row;
+            font-family: $font-sans-serif;
+            font-weight: $font-weight-regular;
+            text-transform: uppercase;
+            font-size: $font-size-tiny;
+            color: $color-gray;
+            // align-items: center;
+        }
+    
+        &__avatar {
+            width: 30px;
+            height: 30px;
+            margin-right: 8px;
+    
+            img {
+                border-radius: 50%;
+            }
+        }
+    
+        &__author {
+            margin-right: 16px;
+            position: relative;
+    
+            &:after {
+                display: block;
+                content: "•";
+                bottom: 0;
+                right: -11px;
+                position: absolute;
+              }
+        }
     }
 }
