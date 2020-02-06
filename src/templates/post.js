@@ -33,7 +33,7 @@ const Post = ({ data, location }) => {
                             <div className="hero">
                                 <HeroPostCard key={post.id} post={post} />
                             </div> : null }
-                        <div class="post__hero-border"></div>
+                        {/* <div class="post__hero-border"></div> */}
 
                         <section className="post-full-content">
                             {/* The main post content */ }

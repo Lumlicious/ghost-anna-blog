@@ -1,7 +1,7 @@
 .menu {
 	&__button {
-		height: 30px;
-		width: 30px;
+		height: 50px;
+		width: 50px;
 		position: relative;
 		z-index: 101;
 	}
@@ -61,7 +61,7 @@
 			list-style: none;
 		}
 		li {
-			padding: 8px 0;
+			padding: 10px 0;
 			transition: all 400ms 510ms;
 			opacity: 0;
 
@@ -80,7 +80,7 @@
 		a {
 			color: $color-brand;
 			display: inline-block;
-			font-size: 18px;
+			font-size: 30px;
 			&.suBtn {
 				color: #fff;
 			}
@@ -117,8 +117,4 @@
 			}
 		}
 	}
-}
-
-@include breakpoint(m) {
-	
 }

@@ -1,4 +1,8 @@
 a {
+    color: $color-brand;
     text-decoration: none;
-    color: $color-link;
+}
+
+a:hover {
+    text-decoration: underline;
 }

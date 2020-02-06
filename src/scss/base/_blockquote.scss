@@ -1,15 +1,33 @@
+
 blockquote {
-    font-weight: $font-weight-medium;
-    font-family: $font-sans-serif;
-    border-left: calc(#{$base-spacing-unit} / 2) solid $color-brand;
-    padding: calc(#{$base-spacing-unit} / 2) + $base-spacing-unit;
-    background-color: $card-bg;
-    box-shadow: calc(#{$base-spacing-unit} / 2) calc(#{$base-spacing-unit} / 2) 0 $bg-gray;
-  
-    @include breakpoint(md) {
-      font-size: $font-size-h2;
-      padding: calc(#{$base-spacing-unit} * 2) + $base-spacing-unit;
-      margin-top: calc(#{$base-spacing-unit} / 2);
-      margin-bottom: calc(#{$base-spacing-unit} * 2);
+  margin: 0.3em 0 1.8em;
+  padding: 0 1.6em 0 1.6em;
+  border-left: $color-brand 0.5em solid;
+
+  p {
+    margin: 0.8em 0;
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+
+  small {
+    display: inline-block;
+    margin: 0.8em 0 0.8em 1.5em;
+    font-size: 0.9em;
+    opacity: 0.8;
+
+    /* Quotation marks */
+    &:before {
+      content: "\2014 \00A0";
     }
   }
+
+  cite {
+    font-weight: bold;
+
+    a {
+      font-weight: normal;
+    }
+  }
+
+}

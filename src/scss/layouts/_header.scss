@@ -1,5 +1,4 @@
 .header {
-    
     &__content {
         display: flex;
         flex-direction: row;
@@ -14,10 +13,15 @@
         img {
             max-height: 100px;
         }
+
+        a:hover {
+            text-decoration: none;
+        }
     }
 
     &__title-text {
-        font-size: var(--text-lg);
-        font-family: var(--font-secondary);
+        font-size: $font-size-large;
+        font-family: $font-sans-serif;
+        
     }
 }

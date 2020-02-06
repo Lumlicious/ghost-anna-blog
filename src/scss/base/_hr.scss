@@ -1,11 +1,10 @@
 hr {
-    height: 1px;
-    border: 0;
-    background-color: $color-border;
-    margin: ($base-spacing-unit + calc(#{$base-spacing-unit} / 2)) 0;
-  
-    @include breakpoint(md) {
-      margin: (calc(#{$base-spacing-unit} * 2) + calc(#{$base-spacing-unit} / 2)) 0;
-    }
-    
-  }
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 1.8em 0 2.4em;
+  padding: 0;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $color-black;
+}

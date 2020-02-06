@@ -1,37 +1,36 @@
 pre {
-    padding: calc(#{$base-spacing-unit} * 2);
-  }
-  
-  pre,
-  code {
-    overflow: auto;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-all;
-  
-    font-family: $font-monospace;
-    font-size: $font-size-medium;
-    background-color: $bg-code-block;
-  }
-  
-  p code,
-  li code {
-    color: $color-code-inline;
-    background-color: $bg-code-inline;
-    padding: calc(#{$base-spacing-unit} / 8)  calc(#{$base-spacing-unit} / 4);
-  }
-  
-  // Prism.js Customization
-  
-  pre[class*='language-'] {
-    padding: calc(#{$base-spacing-unit} * 2);
-    margin-bottom: $base-spacing-unit + calc(#{$base-spacing-unit} / 2);
-  }
-  
-  code[class*='language-'],
-  pre[class*='language-'] {
-    white-space: pre-wrap;
-    word-break: break-all;
-    line-height: inherit;
-    background-color: $bg-code-block;
-  }
+  padding: calc(#{$base-spacing-unit} * 2);
+}
+
+pre,
+code {
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+
+  font-family: $font-monospace;
+  font-size: $font-size-medium;
+  background-color: $bg-code-block;
+}
+
+p code,
+li code {
+  color: $color-code-inline;
+  background-color: $bg-code-inline;
+  padding: calc(#{$base-spacing-unit} / 8)  calc(#{$base-spacing-unit} / 4);
+}
+
+// Prism.js Customization
+pre[class*='language-'] {
+  padding: calc(#{$base-spacing-unit} * 2);
+  margin-bottom: $base-spacing-unit + calc(#{$base-spacing-unit} / 2);
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  white-space: pre-wrap;
+  word-break: break-all;
+  line-height: inherit;
+  background-color: $bg-code-block;
+}
