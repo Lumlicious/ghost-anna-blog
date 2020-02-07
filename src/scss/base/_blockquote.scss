@@ -3,11 +3,13 @@ blockquote {
   margin: 0.3em 0 1.8em;
   padding: 0 1.6em 0 1.6em;
   border-left: $color-brand 0.5em solid;
+  font-family: $font-sans-serif;
 
   p {
     margin: 0.8em 0;
     font-size: 1.2em;
-    font-weight: 300;
+    line-height: 1.4;
+    font-weight: 700;
   }
 
   small {

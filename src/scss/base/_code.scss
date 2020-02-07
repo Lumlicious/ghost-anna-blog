@@ -1,5 +1,6 @@
 pre {
   padding: calc(#{$base-spacing-unit} * 2);
+  border-radius: 5px;
 }
 
 pre,
@@ -11,7 +12,9 @@ code {
 
   font-family: $font-monospace;
   font-size: $font-size-medium;
-  background-color: $bg-code-block;
+  background-color: $color-black;
+
+  color: white;
 }
 
 p code,

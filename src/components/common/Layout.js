@@ -54,7 +54,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 </header>
 
 
-                <main className="main">
+                <main className="site-main outer">
                     <div className="container">
                         {children}
                     </div>

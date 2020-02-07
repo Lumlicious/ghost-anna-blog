@@ -6,3 +6,11 @@ svg,
 video {
     vertical-align: middle;
 }
+
+figcaption {
+    width: 100%;
+    background-color: $bg-white;
+    font-family: $font-sans-serif;
+    text-align: center;
+    font-size: $font-size-tiny;
+}

@@ -26,19 +26,21 @@ const Post = ({ data, location }) => {
                 <style type="text/css">{`${post.codeinjection_styles}`}</style>
             </Helmet>
             <Layout>
-                <div class="post">
+                <div className="post-full">
                     <article className="content grt">
 
-                        { post.feature_image ?
-                            <div className="hero">
-                                <HeroPostCard key={post.id} post={post} />
-                            </div> : null }
-                        {/* <div class="post__hero-border"></div> */}
+                        <header className="post-full-header">
+                            { post.feature_image ?
+                                <div className="hero">
+                                    <HeroPostCard key={post.id} post={post} />
+                                </div> : null }
+                            {/* <div Nameclass="post__hero-border"></div> */}
+                        </header>
+
 
                         <section className="post-full-content">
-                            {/* The main post content */ }
-                            <section
-                                className="content-body load-external-scripts"
+                            <div
+                                className="post-content load-external-scripts"
                                 dangerouslySetInnerHTML={{ __html: post.html }}
                             />
                         </section>

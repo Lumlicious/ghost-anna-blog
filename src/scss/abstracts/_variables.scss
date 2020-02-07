@@ -26,4 +26,39 @@ $font-size-h6:  16px;
 
 $base-spacing-unit: 16px;
 
+// :root {
+//     /* Colours */
+//     --blue: #3eb0ef;
+//     --green: #a4d037;
+//     --purple: #ad26b4;
+//     --yellow: #fecd35;
+//     --red: #f05230;
+//     --darkgrey: #15171A;
+//     --midgrey: #738a94;
+//     --lightgrey: #c5d2d9;
+//     --whitegrey: #e5eff5;
+//     --pink: #fa3a57;
+//     --brown: #a3821a;
+//     --darkmode: color(var(--darkgrey) l(+2%));
+// }
 
+// :root {
+//     /* font family */
+//     --font-primary: sans-serif;
+//     --font-secondary: serif;
+// }
+
+// :root {
+//     // body font size
+//     --text-base-size: 1em;
+    
+//     // type scale
+//     --text-scale-ratio: 1.2;
+//     --text-xs: calc((1em / var(--text-scale-ratio)) / var(--text-scale-ratio));
+//     --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+//     --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+//     --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+//     --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+//     --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+//     --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+//   }

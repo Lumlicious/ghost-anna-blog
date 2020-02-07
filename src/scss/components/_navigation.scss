@@ -3,7 +3,7 @@
 		height: 50px;
 		width: 50px;
 		position: relative;
-		z-index: 101;
+		z-index: 152;
 	}
 
 	&__hamburger {
@@ -43,7 +43,7 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		z-index: 100;
+		z-index: 151;
 		height: 100%;
 		width: 100%;
 		display: table;
@@ -108,6 +108,7 @@
 		&.menu__container {
 			opacity: 1;
 			transform: scale(1);
+			z-index: 151;
 
 			ul  {
 				li {
