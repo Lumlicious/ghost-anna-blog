@@ -12,51 +12,6 @@ import { Link } from 'gatsby'
 * to a `site-nav-item` class.
 *
 */
-// const Navigation = ({ data, navClass }) => {
-
-//     const handleClick = (event) => {
-//         const currentState = this.state;
-//         this.ListeningStateChangedEvent({ activeMenu: !currentState});
-//     };
-
-//     return (
-//         <>
-//             {/* {data.map((navItem, i) => {
-//                 if (navItem.url.match(/^\s?http(s?)/gi)) {
-//                     return <a className={navClass} href={navItem.url} key={i} target="_blank" rel="noopener noreferrer">{navItem.label}</a>
-//                 } else {
-//                     return <Link className={navClass} to={navItem.url} key={i}>{navItem.label}</Link>
-//                 }
-//             })} */}
-//             <header>
-//                 <a href="#" className="logo">logo</a>
-//                 <a href="#" className="{this.state.activeMenu ? 'mainMenu act' : 'mainMenu'}" onClick={() => this.handleClick()}>
-//                     <span className="lines"></span>
-//                 </a>
-//                 <nav className="mainMenu" >
-//                     <ul>
-//                         <li>
-//                             <a href="#">Intro</a>
-//                         </li>
-//                         <li>
-//                             <a href="#">Services</a>
-//                         </li>
-//                         <li>
-//                             <a href="#">Team</a>
-//                         </li>
-//                         <li>
-//                             <a href="#">Pricing</a>
-//                         </li>
-//                         <li>
-//                             <a href="#" class="suBtn">Sing Up</a>
-//                         </li>
-//                     </ul>
-//                 </nav>
-//             </header>
-//         </>
-//     );
-// }
-
 class Navigation extends React.Component {
     state = {
         activeMenu: false

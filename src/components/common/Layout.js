@@ -37,13 +37,10 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         <div className="header__content">
                             <div className="header__logo">
                                 <Link to="/">
-                                    <div className="header__title-text">
-                                        {site.title}
-                                    </div>
-                                    {/* {site.logo ?
-                                        <img className="site-logo" src={site.logo} alt={site.title} />
-                                        : <Img fixed={data.file.childImageSharp.fixed} alt={site.title} />
-                                    } */}
+                                    {site.logo ?
+                                        <img className="header__logo-image" src={site.logo} alt={site.title} />
+                                        :  <div className="header__title-text">{site.title}</div>
+                                    }
                                 </Link>
                             </div>
                             {/* { site.twitter && <a href={ twitterUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>}

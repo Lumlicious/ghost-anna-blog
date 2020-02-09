@@ -11,9 +11,7 @@ const PostCard = ({ post }) => {
     return (
         <Link to={url} className="post-card">
             <div className="post-card__inside">
-                <div className="post-card__media" style={{ ...post.feature_image && { backgroundImage: `url(${post.feature_image})` } }}>
-                    {/* <img src={post.feature_image}></img> */}
-                </div>
+                <div className="post-card__media" style={{ ...post.feature_image && { backgroundImage: `url(${post.feature_image})` } }}></div>
                 <div className="post-card__content">
                     {post.tags && <div className="post-card__tag"> <Tags post={post} visibility="public" autolink={false} /></div>}
                     <h2 className="post-card__title">{post.title}</h2>
