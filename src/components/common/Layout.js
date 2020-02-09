@@ -32,7 +32,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
             
             <div className="viewport">
 
-                <header className="header">
+                <header className="header outer">
                     <div className="container">
                         <div className="header__content">
                             <div className="header__logo">
