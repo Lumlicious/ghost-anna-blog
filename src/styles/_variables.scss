@@ -1,0 +1,69 @@
+// *----------------------------------*\
+//  Settings > Colors
+// *----------------------------------*/
+
+// Colors
+$color-brand: #D3242C !default;
+$color-white: #FFFFFF !default;
+$color-black: #000000 !default;
+$color-text:  #000000 !default;
+$color-gray:  #585858 !default;
+
+// Background Colors
+$bg-color:        #F5F5F5 !default;
+$bg-gray:         #ECECEC !default;
+$bg-white:        $color-white !default;
+$bg-dark-opacity: rgba($color-black, .1);
+
+// Border
+$color-border: #ECECEC !default;
+$color-border-dark: #222222 !default;
+
+// Links
+$color-link: $color-text !default;
+
+// Cards
+$card-bg: $bg-white !default;
+
+// Buttons
+$btn-bg:       #313638 !default;
+$btn-bg-hover: $color-brand !default;
+
+$btn-color:       $color-white !default;
+$btn-color-hover: $color-white !default;
+
+// Code Block
+$bg-code-block: $bg-gray !default;
+
+$bg-code-inline:  $bg-gray !default;
+$color-code-inline: $color-text !default;
+
+
+
+// *----------------------------------*\
+//  Settings > Type
+// *----------------------------------*/
+
+$font-serif:      'Crimson Text', Georgia, serif;
+$font-sans-serif: 'Poppins', Helvetica, Arial, sans-serif;
+$font-monospace:  Courier, monospace;
+
+$font-size-base:   22px;
+$font-size-medium: 16px;
+$font-size-small:  14px;
+$font-size-tiny:   12px;
+$font-size-mini:   11px;
+
+$font-weight-regular: 400;
+$font-weight-medium:  600;
+$font-weight-bold:    700;
+
+$line-height-base:   1.5;
+
+
+$font-size-h1:  32px;
+$font-size-h2:  28px;
+$font-size-h3:  24px;
+$font-size-h4:  20px;
+$font-size-h5:  18px;
+$font-size-h6:  16px;

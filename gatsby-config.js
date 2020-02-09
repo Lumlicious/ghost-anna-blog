@@ -183,5 +183,21 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-force-trailing-slashes`,
         `gatsby-plugin-offline`,
+        `gatsby-plugin-sass`,
+        {
+            resolve: `gatsby-plugin-prefetch-google-fonts`,
+            options: {
+                fonts: [
+                {
+                    family: `Poppins`,
+                    variants: [`500`, `700`]
+                },
+                {
+                    family: `Crimson Text`,
+                    variants: [`300`, `400`, `400i`, `700`]
+                },
+                ],
+            },
+        }
     ],
 }

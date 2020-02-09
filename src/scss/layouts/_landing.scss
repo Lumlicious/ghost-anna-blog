@@ -1,0 +1,25 @@
+.landing {
+    margin-top: 30px;
+    &__posts {
+        display: grid;
+        justify-content: space-between;
+        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 980px) {
+    .landing {
+        &__posts {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+@media (max-width: 680px) {
+    .landing {
+        &__posts {
+            grid-template-columns: 1fr;
+        }
+    }
+}

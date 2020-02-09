@@ -26,15 +26,22 @@ const Page = ({ data, location }) => {
                 <style type="text/css">{`${page.codeinjection_styles}`}</style>
             </Helmet>
             <Layout>
-                <div className="container">
-                    <article className="content">
-                        <h1 className="content-title">{page.title}</h1>
-
-                        {/* The main page content */}
-                        <section
-                            className="content-body load-external-scripts"
-                            dangerouslySetInnerHTML={{ __html: page.html }}
-                        />
+                <div className="post-full">
+                    <article className="content grt">
+                        <header className="post-full-header">
+                            { page.feature_image ?
+                                <div className="hero">
+                                    <img src="page.feature_image"></img>
+                                </div> : null }
+                            {/* <div Nameclass="post__hero-border"></div> */}
+                        </header>
+                        <section className="post-full-content">
+                            <h1 className="content-title">{page.title}</h1>
+                            <div
+                                className="post-content load-external-scripts"
+                                dangerouslySetInnerHTML={{ __html: page.html }}
+                            />
+                        </section>
                     </article>
                 </div>
             </Layout>

@@ -1,0 +1,143 @@
+.post-full-content {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 170px 6vw;
+    min-height: 230px;
+}
+
+@media (max-width: 1170px) {
+    .post-full-content {
+        padding: 0 11vw;
+    }
+}
+@media (max-width: 800px) {
+    .post-full-content {
+        padding: 0 5vw;
+    }
+}
+
+.post-full-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.post {
+    &__hero-border {
+        height: 1.5em;
+        width: 100%;
+        background-color: $bg-white;
+    }
+}
+
+.post-full-content img,
+.post-full-content video {
+    display: block;
+    margin: 1.5em auto;
+    max-width: 1040px;
+    height: auto;
+}
+@media (max-width: 1040px) {
+    .post-full-content img,
+    .post-full-content video {
+        width: 100%;
+    }
+}
+
+
+/* Full bleed images (#full)
+Super neat trick courtesy of @JoelDrapper
+Usage (In Ghost edtior):
+![img](/some/image.jpg#full)
+*/
+.post-full-content img[src$="#full"] {
+    max-width: none;
+    width: 100vw;
+}
+
+
+/* Image captions
+Usage (In Ghost editor):
+![img](/some/image.jpg)
+<small>Your image caption</small>
+*/
+.post-full-content img + br + small {
+    display: block;
+    margin-top: -3em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+
+/* Override third party iframe styles */
+.post-full-content iframe {
+    margin: 0 auto !important;
+}
+
+.post-full-content .fluid-width-video-wrapper {
+    margin: 1.5em 0 3em;
+}
+
+.footnotes-sep {
+    margin-bottom: 30px;
+}
+
+.footnotes {
+    font-size: 1.5rem;
+}
+
+.footnotes p {
+    margin: 0;
+}
+
+.footnote-backref {
+    color: var(--blue) !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none !important;
+    box-shadow: none !important;
+}
+
+/* Some grouped styles for smaller viewports */
+@media (max-width: 1170px) {
+    .post-full-image {
+        margin: 25px -6vw 50px;
+        border-radius: 0;
+    }
+
+    .post-full-image img {
+        max-width: 1170px;
+    }
+}
+
+@media (max-width: 700px) {
+    .post-full-image {
+        margin: 25px -5vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .post-full-meta {
+        font-size: 1.2rem;
+        line-height: 1.3em;
+    }
+
+    .post-full-title {
+        margin-top: 0.2em;
+        font-size: 3.3rem;
+    }
+
+    .post-full-image {
+        margin-top: 5px;
+        margin-bottom: 5vw;
+    }
+
+    .post-full-content {
+        padding: 0;
+    }
+
+    .post-full-content:before,
+    .post-full-content:after {
+        display: none;
+    }
+}
