@@ -17,9 +17,10 @@ const HeroPostCard = ({ post }) => {
                 <div className="hero-post-card__meta">
                     <section className="hero-post-card__excerpt">{post.excerpt}</section>
                     <footer className="hero-post-card__footer">
+                        
                         <div className="hero-post-card__avatar">
                             {post.primary_author.profile_image ?
-                                <img className="author-profile-image" src={post.primary_author.profile_image} alt={post.primary_author.name}/> :
+                                <div className="hero-post-card__avatar-image" style={{ backgroundImage: `url(${post.primary_author.profile_image})` }} alt={post.primary_author.name}/> :
                                 <img className="default-avatar" src="/images/icons/avatar.svg" alt={post.primary_author.name}/>
                             }
                         </div>
