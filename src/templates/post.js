@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 
 import { Layout, HeroPostCard } from '../components/common'
 import { MetaData } from '../components/common/meta'
+import { DiscussionEmbed } from "disqus-react"
 
 /**
 * Single post view (/:slug)
@@ -33,6 +34,11 @@ class Post extends React.Component {
     }
 
     render() {
+        const disqusConfig = {
+            shortname: 'annawaywego',
+            config: { identifier: this.post.slug, title: this.post.title },
+        }
+
         return (
             <>
                 <MetaData
@@ -62,8 +68,10 @@ class Post extends React.Component {
                                     dangerouslySetInnerHTML={{ __html: this.post.html }}
                                 />
                             </section>
+                            <hr />
                         </article>
                     </div>
+                    <DiscussionEmbed {...disqusConfig} />
                 </Layout>
             </>
         )
@@ -77,6 +85,7 @@ Post.propTypes = {
             title: PropTypes.string.isRequired,
             html: PropTypes.string.isRequired,
             feature_image: PropTypes.string,
+            slug: PropTypes.string
         }).isRequired,
     }).isRequired,
     location: PropTypes.object.isRequired,
