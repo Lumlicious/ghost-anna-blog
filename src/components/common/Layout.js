@@ -2,10 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { Link, StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 
 import { Navigation } from '.'
-import config from '../../utils/siteConfig'
 
 // Styles
 import '../../scss/styles.scss'
@@ -18,10 +16,10 @@ import '../../scss/styles.scss'
 * styles, and meta data for each page.
 *
 */
-const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
+const DefaultLayout = ({ data, children, bodyClass }) => {
     const site = data.allGhostSettings.edges[0].node
-    const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
-    const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}` : null
+    // const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
+    // const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}` : null
     return (
         <>
             <Helmet>
@@ -32,14 +30,15 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
             
             <div className="viewport">
 
-                <header className="header">
+                <header className="header outer">
                     <div className="container">
                         <div className="header__content">
                             <div className="header__logo">
                                 <Link to="/">
-                                    {site.logo ?
-                                        <img className="header__logo-image" src={site.logo} alt={site.title} />
-                                        :  <div className="header__title-text">{site.title}</div>
+                                    {
+                                        site.logo ?
+                                            <img className="header__logo-image" src={site.logo} alt={site.title} /> : 
+                                            <div className="header__title-text">{site.title}</div>
                                     }
                                 </Link>
                             </div>
@@ -49,7 +48,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         </div>
                     </div>
                 </header>
-
 
                 <main className="site-main outer">
                     <div className="container">

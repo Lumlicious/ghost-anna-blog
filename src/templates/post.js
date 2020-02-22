@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 
 import { Layout, HeroPostCard } from '../components/common'
 import { MetaData } from '../components/common/meta'
+import { DiscussionEmbed } from "disqus-react"
 
 /**
 * Single post view (/:slug)
@@ -12,43 +13,64 @@ import { MetaData } from '../components/common/meta'
 * This file renders a single post and loads all the content.
 *
 */
-const Post = ({ data, location }) => {
-    const post = data.ghostPost
+class Post extends React.Component {
+    constructor(props) {
+        super(props)
+        this.content = React.createRef()
+        this.post = this.props.data.ghostPost
+    }
 
-    return (
-        <>
-            <MetaData
-                data={data}
-                location={location}
-                type="article"
-            />
-            <Helmet>
-                <style type="text/css">{`${post.codeinjection_styles}`}</style>
-            </Helmet>
-            <Layout>
-                <div className="post-full">
-                    <article className="content grt">
+    componentDidMount() {
+        // Gallery support
+        this.content.current.querySelectorAll(`.kg-gallery-image > img`).forEach((item) => {
+            const container = item.closest(`.kg-gallery-image`)
+            const width = item.attributes.width.value
+            const height = item.attributes.height.value
+            const ratio = width / height
+            container.style.flex = ratio + ` 1 0%`
+        })
+    }
 
-                        <header className="post-full-header">
-                            { post.feature_image ?
-                                <div className="hero">
-                                    <HeroPostCard key={post.id} post={post} />
-                                </div> : null }
-                            {/* <div Nameclass="post__hero-border"></div> */}
-                        </header>
+    render() {
+        const disqusConfig = {
+            shortname: `annawaywego`,
+            config: { identifier: this.post.slug, title: this.post.title },
+        }
 
-
-                        <section className="post-full-content">
-                            <div
-                                className="post-content load-external-scripts"
-                                dangerouslySetInnerHTML={{ __html: post.html }}
-                            />
-                        </section>
-                    </article>
-                </div>
-            </Layout>
-        </>
-    )
+        return (
+            <>
+                <MetaData
+                    data={this.props.data}
+                    location={this.props.location}
+                    type="article"
+                />
+                <Helmet>
+                    <style type="text/css">{`${this.post.codeinjection_styles}`}</style>
+                </Helmet>
+                <Layout>
+                    <div className="post-full">
+                        <article className="content grt">
+                            <header className="post-full-header">
+                                { this.post.feature_image ?
+                                    <div className="hero">
+                                        <HeroPostCard key={this.post.id} post={this.post} />
+                                    </div> : null }
+                                {/* <div Nameclass="post__hero-border"></div> */}
+                            </header>
+                            <section className="post-full-content" ref={this.content}>
+                                <div
+                                    className="post-content load-external-scripts"
+                                    dangerouslySetInnerHTML={{ __html: this.post.html }}
+                                />
+                            </section>
+                            <hr />
+                        </article>
+                    </div>
+                    <DiscussionEmbed {...disqusConfig} />
+                </Layout>
+            </>
+        )
+    }
 }
 
 Post.propTypes = {
@@ -58,6 +80,7 @@ Post.propTypes = {
             title: PropTypes.string.isRequired,
             html: PropTypes.string.isRequired,
             feature_image: PropTypes.string,
+            slug: PropTypes.string,
         }).isRequired,
     }).isRequired,
     location: PropTypes.object.isRequired,
