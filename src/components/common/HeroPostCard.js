@@ -2,17 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { Tags } from '@tryghost/helpers-gatsby'
-import { readingTime as readingTimeHelper } from '@tryghost/helpers'
 
 const HeroPostCard = ({ post }) => {
     const url = `/${post.slug}/`
-    const readingTime = readingTimeHelper(post)
 
     return (
         <Link to={url} className="hero-post-card">
             <div className="hero-post-card__media" style={{ ...post.feature_image && { backgroundImage: `url(${post.feature_image})` } }}></div>
             <div className="hero-post-card__content">
-            {post.tags && <div className="post-card__tag"> <Tags post={post} visibility="public" autolink={false} /></div>}
+                {post.tags && <div className="post-card__tag"> <Tags post={post} visibility="public" autolink={false} /></div>}
                 <h2 className="hero-post-card__title">{post.title}</h2>
                 <div className="hero-post-card__meta">
                     <section className="hero-post-card__excerpt">{post.excerpt}</section>

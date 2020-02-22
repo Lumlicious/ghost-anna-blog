@@ -14,12 +14,12 @@ import { Link } from 'gatsby'
 */
 class Navigation extends React.Component {
     state = {
-        activeMenu: false
+        activeMenu: false,
     };
 
-    handleClick = (event) => {
-        const currentState = this.state.activeMenu;
-        this.setState({ activeMenu: !currentState });
+    handleClick = () => {
+        const currentState = this.state.activeMenu
+        this.setState({ activeMenu: !currentState })
     };
 
     render() {
@@ -27,12 +27,12 @@ class Navigation extends React.Component {
             <>
                 <a 
                     href="#" 
-                    className={this.state.activeMenu ? 'menu__button menu--active' : 'menu__button'}
+                    className={this.state.activeMenu ? `menu__button menu--active` : `menu__button`}
                     onClick={() => this.handleClick()}>
                     <span className="menu__hamburger"></span>
                 </a>
                 <nav 
-                    className={this.state.activeMenu ? 'menu__container menu--active' : 'menu__container'}>
+                    className={this.state.activeMenu ? `menu__container menu--active` : `menu__container`}>
                     <ul>
                         {this.props.data.map((navItem, i) => {
                             if (navItem.url.match(/^\s?http(s?)/gi)) {

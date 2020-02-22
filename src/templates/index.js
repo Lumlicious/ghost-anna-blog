@@ -14,8 +14,8 @@ import { MetaData } from '../components/common/meta'
 *
 */
 const Index = ({ data, location, pageContext }) => {
-    const firstPost = data.allGhostPost.edges[0]['node'];
-    const posts = data.allGhostPost.edges.slice(1, data.allGhostPost.edges.length);
+    const firstPost = data.allGhostPost.edges[0].node
+    const posts = data.allGhostPost.edges.slice(1, data.allGhostPost.edges.length)
 
     return (
         <>

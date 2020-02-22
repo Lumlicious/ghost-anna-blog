@@ -188,16 +188,16 @@ module.exports = {
             resolve: `gatsby-plugin-prefetch-google-fonts`,
             options: {
                 fonts: [
-                {
-                    family: `Poppins`,
-                    variants: [`500`, `700`]
-                },
-                {
-                    family: `Crimson Text`,
-                    variants: [`300`, `400`, `400i`, `700`]
-                },
+                    {
+                        family: `Poppins`,
+                        variants: [`500`, `700`],
+                    },
+                    {
+                        family: `Crimson Text`,
+                        variants: [`300`, `400`, `400i`, `700`],
+                    },
                 ],
             },
-        }
+        },
     ],
 }
